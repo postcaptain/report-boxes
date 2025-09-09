@@ -28,7 +28,7 @@
   #content h1 {
     font-family: "Poppins";
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: uppercase !important;
     color: var(--headings);
     font-size: 3rem;
     width: 75%;
@@ -36,7 +36,7 @@
 
   div#page > div#content > div:nth-of-type(1) {
     color: var(--text) !important;
-    text-transform: uppercase;
+    text-transform: uppercase  !important;
     font-weight: bold;
     font-size: 1rem;
   }
@@ -101,7 +101,7 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
       border-color: #ffffff;
       font-family: "Poppins" !important;
       color: var(--headings);
-      text-transform: uppercase;
+      text-transform: uppercase !important;
       font-weight: bold;
       font-size: 1.2rem;
   }
