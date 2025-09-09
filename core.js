@@ -30,16 +30,29 @@
     }
 
     /* if a query has no results, show "no results" */
-    document.querySelectorAll('.report_part[data-type="query"] table tbody').forEach(tbody => {
-      if (!tbody.querySelector('tr')) {
-        const tr = document.createElement('tr');
-        const td = document.createElement('td');
-        td.colSpan = tbody.closest('table').querySelectorAll('thead th').length || 1;
-        td.textContent = "No results";
-        td.classList.add("no-results");
-        tr.appendChild(td);
-        tbody.appendChild(tr);
-      }
+    function checkQueries() {
+      document.querySelectorAll('.report_part[data-type="query"] table tbody').forEach(tbody => {
+        if (!tbody.querySelector('tr') && !tbody.dataset.noResultsInjected) {
+          const tr = document.createElement('tr');
+          const td = document.createElement('td');
+          td.colSpan = tbody.closest('table').querySelectorAll('thead th').length || 1;
+          td.textContent = "No results";
+          td.classList.add("no-results");
+          tr.appendChild(td);
+          tbody.appendChild(tr);
+          tbody.dataset.noResultsInjected = "true"; // ✅ don’t run twice
+        }
+      });
+    }
+    
+    checkQueries(); // run once immediately
+    
+    const observer = new MutationObserver(() => {
+      checkQueries();
+    });
+    
+    document.querySelectorAll('.report_part[data-type="query"]').forEach(part => {
+      observer.observe(part, { childList: true, subtree: true });
     });
   }
 
