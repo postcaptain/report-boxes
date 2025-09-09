@@ -105,6 +105,9 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
       font-size: 1.2rem;
   }
 
+  div.report_container div.report_part[data-type="query"]>table thead tr.header th span.report_export {
+      display: none;
+  }
 
   /* page breaks */
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row[data-type="pagebreak"] {
