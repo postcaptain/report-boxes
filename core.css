@@ -21,6 +21,7 @@
 
   #content * {
     font-family: "DM Sans";
+    font-weight: normal;
   }
 
   #content h1 {
@@ -97,7 +98,7 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
   div.report_container div.report_part[data-type="query"]>table thead tr.header th {
       background: #ffffff;
       border-color: #ffffff;
-      font-family: "Poppins";
+      font-family: "Poppins" !important;
       color: var(--headings);
       text-transform: uppercase;
       font-weight: bold;
