@@ -55,7 +55,7 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
     display: none;
   }
 
-  div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row {
+  div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row:not([data-type = "content"]) {
     margin: 0;
     box-sizing: border-box;
     border: 3px solid var(--block-bg);
@@ -64,7 +64,7 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
     padding: 2em;
   }
 
-  div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row * {
+  div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row:not([data-type = "content"]) * {
     background: var(--block-bg);
     border-color: var(--block-bg);
   }
