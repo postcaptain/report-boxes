@@ -184,3 +184,11 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
       width: 250px;   /* scale */
       height: auto;
     }
+
+/* missing query results */
+.no-results {
+  text-align: center;
+  font-style: italic;
+  color: var(--text);
+  opacity: 0.7;
+}
