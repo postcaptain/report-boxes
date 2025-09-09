@@ -134,6 +134,18 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
     border-color: #ffffff;
   }
 
+  /* make it so h1 in static content block is a little bigger than the title h2 */
+  #content div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row[data-type="content"] h1 {
+    color: var(--headings);
+    font-size: 1.5rem;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #ffffff;
+    border-color: #ffffff;
+  }
+
+
   /* readability on pdf */
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row[data-type="table"] * {
     font-size: 1.05em;
