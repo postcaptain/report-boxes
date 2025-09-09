@@ -28,6 +28,19 @@
       }
       i = j;
     }
+
+    /* if a query has no results, show "no results" */
+    document.querySelectorAll('.report_part[data-type="query"] table tbody').forEach(tbody => {
+      if (!tbody.querySelector('tr')) {
+        const tr = document.createElement('tr');
+        const td = document.createElement('td');
+        td.colSpan = tbody.closest('table').querySelectorAll('thead th').length || 1;
+        td.textContent = "No results";
+        td.classList.add("no-results");
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+      }
+    });
   }
 
   // Inject CSS <link> once
