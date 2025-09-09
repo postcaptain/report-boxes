@@ -44,7 +44,7 @@
 
     // Fallback hard URL (edit to your latest tag if needed)
     if (!/\.css/i.test(cssHref)) {
-      cssHref = "https://cdn.jsdelivr.net/gh/postcaptain/report-boxes@v0.8.0/core.css";
+      cssHref = "https://cdn.jsdelivr.net/gh/postcaptain/report-boxes@v0.8.5/core.css";
     }
 
     if (!document.querySelector(`link[rel="stylesheet"][href="${cssHref}"]`)) {
