@@ -22,6 +22,7 @@
   #content * {
     font-family: "DM Sans";
   }
+
   #content h1 {
     font-family: "Poppins";
     font-weight: bold;
@@ -47,11 +48,12 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
     justify-content: space-evenly;
     align-items: flex-start;
     gap: 10px;
-    
   }
+
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>table {
     display: none;
   }
+
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row {
     margin: 0;
     box-sizing: border-box;
@@ -60,6 +62,7 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
     border-radius: 5px;
     padding: 2em;
   }
+
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row * {
     background: var(--block-bg);
     border-color: var(--block-bg);
@@ -73,8 +76,6 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
     background: var(--highlight-bg);
     border-color: var(--highlight-bg);
   }
-  
-  
 
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row th span {
     background: var(--header-bg);
@@ -85,6 +86,24 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
     width: 100%;
     padding: 4px 8px;
   }
+
+  /* query display */
+    /* make the display of the query name into a heading */
+  div.report_container div.report_part[data-type="query"]>table thead tr.header {
+      background: #ffffff;
+      border-color: #ffffff;
+  }
+
+  div.report_container div.report_part[data-type="query"]>table thead tr.header th {
+      background: #ffffff;
+      border-color: #ffffff;
+      font-family: "Poppins";
+      color: var(--headings);
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2rem;
+  }
+
 
   /* page breaks */
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row[data-type="pagebreak"] {
@@ -118,14 +137,11 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
   .report_row[data-type="table"].stack1 {width: calc(100% - 10px);}
   .report_row[data-type="table"].stack2 {width: calc(50% - 10px);}
   .report_row[data-type="table"].stack3 {width: calc(33% - 10px);}
-  .report_row[data-type="table"].stack4 {   width: calc(25% - 10px);}
-
+  .report_row[data-type="table"].stack4 {width: calc(25% - 10px);}
 
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row>table>colgroup>col:nth-child(1) {
     width: 100%;
   }
-
-
 
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row>table>thead>tr.column>th span.report_export {
     display: none;
@@ -142,6 +158,7 @@ div.report_container div.report_part:nth-child(n+2) div.report_rows_static {
     font-weight: bold;
     font-size: 0.8em;
   }
+
   div.report_container div.report_part:nth-child(n+2) div.report_rows_static>div.report_row>table>tbody>tr>td:nth-child(2) {
     color: var(--text);
     text-transform: uppercase;
